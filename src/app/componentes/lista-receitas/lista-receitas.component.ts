@@ -35,11 +35,6 @@ export class ListaReceitasComponent {
         value: 'Salgados',
         receitas: this.receitasPorCategoria.get('salgado') ?? []
       },
-      {
-        id: 'salgado-e-picante',
-        value: 'Salgado e Picante',
-        receitas: this.receitasPorCategoria.get('salgado-e-picante') ?? []
-      }
     ];
 
     console.log(this.receitasPorCategoria);

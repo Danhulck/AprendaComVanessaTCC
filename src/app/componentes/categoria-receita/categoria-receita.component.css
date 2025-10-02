@@ -1,39 +1,90 @@
-.categoria-container {
-  margin-bottom: 40px;
-  text-align: center; /* Centraliza o título */
+/* Container do título */
+.categoria-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 24px auto;
+  max-width: 600px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.categoria-header:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito glow animado */
+.categoria-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.categoria-header:hover::before {
+  transform: rotate(90deg);
+  opacity: 0.6;
+}
+
+/* Ícone */
+.icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.categoria-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Texto */
+.text-wrapper .title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-wrapper .message {
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Estilos dinâmicos */
+.categoria-header.doce {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+}
+
+.categoria-header.salgado {
+  background: linear-gradient(135deg, #ff9a8b, #ff6a00);
+}
+
+/* Grid de receitas */
 .receitas-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-}
-
-/* Título base */
-.categoria-titulo {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 24px auto; /* Centraliza com auto nas laterais */
-  display: inline-block; /* Mantém formato “pílula” */
-  padding: 6px 20px;
-  border-radius: 30px;
-}
-
-/* Doce */
-.categoria-titulo.doce {
-  background: linear-gradient(90deg, #ffc1e3, #ff80ab);
-  color: #b4005c;
-}
-
-/* Salgado */
-.categoria-titulo.salgado {
-  background: linear-gradient(90deg, #ffd8a8, #ff9f40);
-  color: #a84a00;
-}
-
-/* Agridoce (extra, caso use) */
-.categoria-titulo.agridoce {
-  background: linear-gradient(90deg, #c1ffd7, #40ff9f);
-  color: #00663d;
+  margin-top: 20px;
 }

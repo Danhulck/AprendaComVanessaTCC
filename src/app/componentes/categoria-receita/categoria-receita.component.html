@@ -1,19 +1,25 @@
-<div class="categoria-container">
-  <h2 class="categoria-titulo doce">Doces</h2>
-  <div class="receitas-grid">
-    @for (receita of categoria().receitas; track receita.id) {
-      <app-receita-card [receita]="receita"></app-receita-card>
-    }
+<div class="categoria-header" [ngClass]="categoria().id">
+  <div class="icon-wrapper">
+    <svg
+      class="categoria-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  </div>
+
+  <div class="text-wrapper">
+    <div class="title">{{ categoria().value }}</div>
+    <div class="message">Receitas deliciosas da categoria {{ categoria().value }}</div>
   </div>
 </div>
 
-<div class="categoria-container">
-  <h2 class="categoria-titulo salgado">Salgados</h2>
-  <div class="receitas-grid">
-    @for (receita of categoria().receitas; track receita.id) {
-      <app-receita-card [receita]="receita"></app-receita-card>
-    }
-  </div>
+<div class="receitas-grid">
+  @for (receita of categoria().receitas; track receita.id) {
+    <app-receita-card [receita]="receita"></app-receita-card>
+  }
 </div>
-
-
