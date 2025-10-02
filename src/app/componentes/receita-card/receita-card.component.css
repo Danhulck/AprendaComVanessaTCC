@@ -1,0 +1,157 @@
+/* Card base */
+.article-wrapper {
+    width: 250px;
+    transition: 0.3s all ease-in-out;
+    border-radius: 10px;
+    padding: 5px;
+    border: 4px solid transparent;
+    cursor: pointer;
+    background-color: white;
+    transform: translate(0, 0);
+  }
+  
+  .categoria-container {
+    margin-bottom: 40px;
+  }
+  
+  .categoria-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 16px 0;
+    color: var(--color-primaria);
+    text-align: center;
+  }
+  
+  .receitas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1200px; /* limita a largura */
+    margin: 0 auto;    /* centraliza no meio */
+    padding: 10px;
+  }
+  
+  /* Doce - cores */
+  .article-wrapper.doce {
+    border-color: #ffc1e3; /* rosa claro */
+  }
+  .article-wrapper.doce:hover {
+    box-shadow: 8px 8px 0 #ff80ab, 16px 16px 0 #b4005c;
+    border-color: #ff80ab;
+    transform: translate(-10px, -10px) scale(1.02);
+  }
+  
+  /* Salgado - cores */
+  .article-wrapper.salgado {
+    border-color: #ffd8a8; /* laranja claro */
+  }
+  .article-wrapper.salgado:hover {
+    box-shadow: 8px 8px 0 #ff9f40, 16px 16px 0 #a84a00;
+    border-color: #ff9f40;
+    transform: translate(-10px, -10px) scale(1.02);
+  }
+  
+  /* Container da imagem */
+  .container-project {
+    width: 100%;
+    height: 170px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .container-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Conteúdo */
+  .project-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .flex-pr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-title {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+  }
+  
+  .types {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Badge base */
+  .project-type {
+    font-weight: bold;
+    padding: 0.3em 0.7em;
+    border-radius: 15px;
+    font-size: 12px;
+    letter-spacing: -0.6px;
+    transition: all 0.3s ease;
+  }
+  
+  /* ❤️ Doce */
+  .project-type.doce {
+    background: #ffc1e3;
+    color: #b4005c;
+  }
+  .article-wrapper:hover .project-type.doce {
+    background: #ff80ab;
+    color: white;
+  }
+  
+  /* 🍊 Salgado */
+  .project-type.salgado {
+    background: #ffd8a8;
+    color: #a84a00;
+  }
+  .article-wrapper:hover .project-type.salgado {
+    background: #ff9f40;
+    color: white;
+  }
+  
+  /* Botão coração */
+  .project-hover {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 22px;
+  }
+  
+  .article-wrapper:hover .project-hover {
+    transform: rotate(-15deg) scale(1.1);
+    background-color: #a6c2f0;
+  }
+  
+  .favorito-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  

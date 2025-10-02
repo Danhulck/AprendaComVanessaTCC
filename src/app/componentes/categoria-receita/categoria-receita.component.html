@@ -1,0 +1,19 @@
+<div class="categoria-container">
+  <h2 class="categoria-titulo doce">Doces</h2>
+  <div class="receitas-grid">
+    @for (receita of categoria().receitas; track receita.id) {
+      <app-receita-card [receita]="receita"></app-receita-card>
+    }
+  </div>
+</div>
+
+<div class="categoria-container">
+  <h2 class="categoria-titulo salgado">Salgados</h2>
+  <div class="receitas-grid">
+    @for (receita of categoria().receitas; track receita.id) {
+      <app-receita-card [receita]="receita"></app-receita-card>
+    }
+  </div>
+</div>
+
+

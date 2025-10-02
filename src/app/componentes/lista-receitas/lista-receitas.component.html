@@ -1,0 +1,9 @@
+<section class="lista-receitas">
+    <h1 class="titulo-principal">Minhas Receitas</h1>
+    <span class="linha-destaque"></span>
+  
+    @for(categoria of categorias; track categoria.id) {
+      <app-categoria-receita [categoria]="categoria"></app-categoria-receita>
+    }
+  </section>
+  

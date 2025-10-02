@@ -1,0 +1,39 @@
+.categoria-container {
+  margin-bottom: 40px;
+  text-align: center; /* Centraliza o título */
+}
+
+.receitas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Título base */
+.categoria-titulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 24px auto; /* Centraliza com auto nas laterais */
+  display: inline-block; /* Mantém formato “pílula” */
+  padding: 6px 20px;
+  border-radius: 30px;
+}
+
+/* Doce */
+.categoria-titulo.doce {
+  background: linear-gradient(90deg, #ffc1e3, #ff80ab);
+  color: #b4005c;
+}
+
+/* Salgado */
+.categoria-titulo.salgado {
+  background: linear-gradient(90deg, #ffd8a8, #ff9f40);
+  color: #a84a00;
+}
+
+/* Agridoce (extra, caso use) */
+.categoria-titulo.agridoce {
+  background: linear-gradient(90deg, #c1ffd7, #40ff9f);
+  color: #00663d;
+}
