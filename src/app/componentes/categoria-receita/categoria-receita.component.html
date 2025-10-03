@@ -14,12 +14,21 @@
 
   <div class="text-wrapper">
     <div class="title">{{ categoria().value }}</div>
-    <div class="message">Receitas deliciosas da categoria {{ categoria().value }}</div>
+    <div class="message">
+      Receitas deliciosas da categoria {{ categoria().value }}
+    </div>
   </div>
 </div>
 
-<div class="receitas-grid">
-  @for (receita of categoria().receitas; track receita.id) {
-    <app-receita-card [receita]="receita"></app-receita-card>
-  }
+<!-- 🔹 Carrossel -->
+<div class="carousel-container">
+  <button class="carousel-btn left" (click)="scrollLeft()">‹</button>
+
+  <div class="carousel" #carousel>
+    @for (receita of categoria().receitas; track receita.id) {
+      <app-receita-card [receita]="receita"></app-receita-card>
+    }
+  </div>
+
+  <button class="carousel-btn right" (click)="scrollRight()">›</button>
 </div>
